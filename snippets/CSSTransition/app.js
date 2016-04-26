@@ -8,9 +8,9 @@ function init()
     console.log("Loaded");
     
     square = document.getElementsByTagName("square")[0];
-	square.addEventListener("click", function(e){
+	window.addEventListener("click", function(e){
 		rotation += 45;
-		square.style.transform = "rotate("+rotation+"deg)";	
+		square.style.transform = "translate("+e.pageX+"px, "+e.pageY+"px) rotate("+rotation+"deg)";	
 	});  
     
 }
