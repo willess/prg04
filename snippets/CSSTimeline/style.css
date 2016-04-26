@@ -1,0 +1,25 @@
+square {
+    background-color: red;
+    
+    width: 100px;
+    height: 100px;
+    
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+.moving {
+	animation: blockanimation 2s linear infinite;
+}
+
+@keyframes blockanimation {
+  0% {
+    transform: rotate(0px);
+  }
+  
+  100% {
+    transform: translateY(200px);
+  }
+}
+
