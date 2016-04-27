@@ -1,11 +1,11 @@
 # Code snippets en inspiratie
 
-## Snippets
+## Code Snippets
 - CSS Keyframes en timeline
 - CSS Transition
 - Javascript requestAnimationFrame
 
-## Code
+## Tutorial links
 - [CSS Filters](https://css-tricks.com/almanac/properties/f/filter/)
 - [CSS Transform](https://css-tricks.com/almanac/properties/t/transform/)
 - [PS4 en XBox gamepad support in the browser](https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
