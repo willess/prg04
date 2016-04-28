@@ -1,6 +1,7 @@
 # Code snippets en inspiratie
 
 ## Code Snippets
+- Leeg startproject voor VS Code
 - CSS Keyframes en timeline
 - CSS Transition
 - Javascript requestAnimationFrame
