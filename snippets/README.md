@@ -15,4 +15,4 @@
 - [Visual Studio Code Tutorial](https://app.pluralsight.com/library/courses/visual-studio-code/table-of-contents)
 - [Typescript documentation](https://www.typescriptlang.org/docs/tutorial.html)
 - [Git Quickstart Tutorial](https://try.github.io/levels/1/challenges/1)
-- [What is the viewport?](https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html)
+- [What is the viewport?](https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag)
