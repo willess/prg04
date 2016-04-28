@@ -10,12 +10,16 @@ square {
 }
 
 .moving {
-	animation: blockanimation 2s linear infinite;
+	animation: hallo 2s linear infinite;
 }
 
-@keyframes blockanimation {
+@keyframes hallo {
   0% {
-    transform: rotate(0px);
+    transform: translateX(500px);
+  }
+
+  20% {
+    background-color: yellow;
   }
   
   100% {
