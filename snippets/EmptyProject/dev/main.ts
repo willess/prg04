@@ -1,4 +1,4 @@
-/// <reference path="block.ts"/>
+/// <reference path="message.ts"/>
 
 class Main {
     constructor() {
