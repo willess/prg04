@@ -16,3 +16,6 @@
 - [Typescript documentation](https://www.typescriptlang.org/docs/tutorial.html)
 - [Git Quickstart Tutorial](https://try.github.io/levels/1/challenges/1)
 - [What is the viewport?](https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag)
+
+## Assets
+- [Open Game Art](http://opengameart.org)
