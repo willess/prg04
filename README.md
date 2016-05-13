@@ -2,10 +2,15 @@
 Typescript oefeningen voor MT-PRG01-4
 
 ## Week 1
-Grumpy fish in a Pixel Aquarium
+Pixel Aquarium Javascript
 
 ## Week 2
-Grumpy fish in a Typescript Aquarium
+Grumpy fish Typescript
+
+## Week 3
+Pong in Typescript
+Code voor Keyboard Input
+Code voor Collision Detection
 
 ## Snippets
 - Leeg startproject voor VS Code
