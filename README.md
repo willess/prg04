@@ -12,6 +12,9 @@ Pixel Aquarium Typescript
 - Code voor Keyboard Input
 - Code voor Collision Detection
 
+## Week 4
+- Composition
+
 ## Snippets
 - Leeg startproject voor VS Code
 - Code snippets voor CSS en javascript

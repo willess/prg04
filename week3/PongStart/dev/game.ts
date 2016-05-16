@@ -1,23 +1,23 @@
 /// <reference path="ball.ts"/>
 class Game {
     
-    ball1:Ball;
-    ball2:Ball;
+    // geef hier de ball instance een naam
+    // ...
     
     constructor() {
-        
-        this.ball1 = new Ball();
-        this.ball2 = new Ball();
+        // maak hier een ball instance
+        // ...
            
-        // start game loop        
+        // start de game loop        
         requestAnimationFrame(this.gameLoop.bind(this));
     }
     
-    // game loop
+    
     private gameLoop(){
-        this.ball1.move();
-        this.ball2.move();
+        // roep hier de move functie van de bal aan
+        // ...
         
+        // hiermee wordt de gameloop opnieuw aangeroepen
         requestAnimationFrame(this.gameLoop.bind(this));
     }
 } 

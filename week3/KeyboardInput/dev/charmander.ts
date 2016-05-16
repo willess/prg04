@@ -29,8 +29,6 @@ class Charmander {
         // positie
         this.posX = 200 + Math.random()*200;
         this.posY = 200 + Math.random()*200;
-                
-        this.move();
         
         // keyboard listener
         window.addEventListener("keydown", this.onKeyDown.bind(this));
