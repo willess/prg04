@@ -5,6 +5,7 @@ class Game {
     // ...
     
     constructor() {
+        
         // maak hier een ball instance
         // ...
            
@@ -15,7 +16,7 @@ class Game {
     
     private gameLoop(){
         // roep hier de move functie van de bal aan
-        // ...
+        ///
         
         // hiermee wordt de gameloop opnieuw aangeroepen
         requestAnimationFrame(this.gameLoop.bind(this));
