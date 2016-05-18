@@ -19,4 +19,5 @@ Pixel Aquarium Javascript
 ## Snippets
 - Leeg startproject voor VS Code
 - Code snippets voor CSS en javascript
+- Code snippet voor Canvas spritesheet
 - Links naar tutorials!
