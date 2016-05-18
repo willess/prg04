@@ -5,7 +5,8 @@ Typescript oefeningen voor MT-PRG01-4
 Pixel Aquarium Javascript
 
 ## Week 2
-Pixel Aquarium Typescript
+- Pixel Aquarium Typescript Start
+- Pixel Aquarium Typescript Finished
 
 ## Week 3
 - Pong in Typescript
@@ -18,4 +19,5 @@ Pixel Aquarium Typescript
 ## Snippets
 - Leeg startproject voor VS Code
 - Code snippets voor CSS en javascript
+- Code snippet voor Canvas spritesheet
 - Links naar tutorials!
