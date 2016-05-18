@@ -5,8 +5,8 @@ Typescript oefeningen voor MT-PRG01-4
 Pixel Aquarium Javascript
 
 ## Week 2
-Pixel Aquarium Typescript - Start
-Pixel Aquarium Typescript - Finished
+- Pixel Aquarium Typescript Start
+- Pixel Aquarium Typescript Finished
 
 ## Week 3
 - Pong in Typescript
