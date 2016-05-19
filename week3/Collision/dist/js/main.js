@@ -2,15 +2,16 @@ var Paddle = (function () {
     function Paddle() {
         this.div = document.createElement("paddle");
         document.body.appendChild(this.div);
-        this.posX = 0;
-        this.posY = 200;
-        this.div.style.transform = "translate(0px, 200px)";
+        this.x = 0;
+        this.y = 200;
+        this.width = 25;
+        this.height = 100;
     }
-    Paddle.prototype.getX = function () {
-        return this.posX;
+    Paddle.prototype.update = function () {
+        this.draw();
     };
-    Paddle.prototype.getY = function () {
-        return this.posY;
+    Paddle.prototype.draw = function () {
+        this.div.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
     };
     return Paddle;
 }());
@@ -18,29 +19,32 @@ var Ball = (function () {
     function Ball() {
         this.div = document.createElement("ball");
         document.body.appendChild(this.div);
-        this.posX = 200;
-        this.posY = 210;
-        this.speedX = -2;
+        this.x = 230;
+        this.y = 210;
+        this.width = 40;
+        this.height = 40;
+        this.speedX = -3;
         this.speedY = 0;
-        this.move();
     }
-    Ball.prototype.checkPaddle = function (pad) {
-        if (this.posX + 40 >= pad.getX() && this.posX <= pad.getX() + 25 && this.posX && this.posY + 40 >= pad.getY() && this.posY <= pad.getY() + 100) {
-            this.speedX *= -1;
-            console.log("De bal raakt de paddle!");
-            document.getElementsByTagName("ui")[0].innerHTML = "De ball raakt de paddle!";
-        }
+    Ball.prototype.hitPaddle = function () {
+        this.speedX *= -1;
     };
-    Ball.prototype.move = function () {
-        this.posX += this.speedX;
-        this.posY += this.speedY;
-        this.div.style.transform = "translate(" + this.posX + "px, " + this.posY + "px)";
-        if (this.posX > window.innerWidth || this.posX < -40) {
-            this.div.remove();
+    Ball.prototype.update = function () {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x > window.innerWidth || this.x < -40) {
+            document.getElementsByTagName("ui")[0].innerHTML = "Resetting ball";
+            this.x = 230;
+            this.y = 210;
+            this.speedX = -3;
         }
-        if (this.posY + 40 > window.innerHeight || this.posY < 0) {
+        if (this.y + 40 > window.innerHeight || this.y < 0) {
             this.speedY *= -1;
         }
+        this.draw();
+    };
+    Ball.prototype.draw = function () {
+        this.div.style.transform = "translate(" + this.x + "px, " + this.y + "px)";
     };
     return Ball;
 }());
@@ -48,11 +52,17 @@ var Game = (function () {
     function Game() {
         this.paddle = new Paddle();
         this.ball = new Ball();
+        this.utils = new Utils();
         requestAnimationFrame(this.gameLoop.bind(this));
     }
     Game.prototype.gameLoop = function () {
-        this.ball.checkPaddle(this.paddle);
-        this.ball.move();
+        var hit = this.utils.hasOverlap(this.ball, this.paddle);
+        if (hit) {
+            document.getElementsByTagName("ui")[0].innerHTML = "BALL HITS PADDLE!";
+            this.ball.hitPaddle();
+        }
+        this.ball.update();
+        this.paddle.update();
         requestAnimationFrame(this.gameLoop.bind(this));
     };
     return Game;
@@ -60,4 +70,12 @@ var Game = (function () {
 window.addEventListener("load", function () {
     new Game();
 });
+var Utils = (function () {
+    function Utils() {
+    }
+    Utils.prototype.hasOverlap = function (c1, c2) {
+        return !(c2.x > c1.x + c1.width || c2.x + c2.width < c1.x || c2.y > c1.y + c1.height || c2.y + c2.height < c1.y);
+    };
+    return Utils;
+}());
 //# sourceMappingURL=main.js.map
