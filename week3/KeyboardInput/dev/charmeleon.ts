@@ -1,4 +1,4 @@
-class Charmander {
+class Charmeleon {
     
     private div:HTMLElement;
     
@@ -12,23 +12,28 @@ class Charmander {
     private downSpeed : number = 0;
     private upSpeed : number = 0;
     
-    private posX : number;
-    private posY : number;
+    // om te zien of objecten elkaar raken moeten ze een public x,y,width,height hebben
+    public x : number;
+    public y : number;
+    public width: number;
+    public height: number;
     
     constructor(left:number, right:number, up:number, down:number) {
         // maak een divje waar de gif in komt te staan
-        this.div = document.createElement("charmander");
+        this.div = document.createElement("charmeleon");
         document.body.appendChild(this.div);
         
-        // keys kunnen verschillend zijn voor elke instance van charmander
+        // keys kunnen verschillend zijn voor elke instance van charmeleon
         this.upkey = up;
         this.downkey = down;
         this.leftkey = left;
         this.rightkey = right;
         
         // positie
-        this.posX = 200 + Math.random()*200;
-        this.posY = 200 + Math.random()*200;
+        this.x = Math.floor(200 + Math.random()*200);
+        this.y = Math.floor(200 + Math.random()*200);
+        this.width = 180;
+        this.height = 145;
         
         // keyboard listener
         window.addEventListener("keydown", this.onKeyDown.bind(this));
@@ -76,12 +81,19 @@ class Charmander {
     // bewegen - let op, de move functie wordt door game aangeroepen - animatie is niet smooth als de keydown listener een beweging triggered
     public move() : void {
         
-        this.posX = this.posX - this.leftSpeed + this.rightSpeed;
-        this.posY = this.posY - this.upSpeed + this.downSpeed;
+        this.x = this.x - this.leftSpeed + this.rightSpeed;
+        this.y = this.y - this.upSpeed + this.downSpeed;
                         
         // de div positie aanpassen met transform - tip: scaleX kan je gebruiken om de andere kant op te kijken
-        this.div.style.transform = "translate("+this.posX+"px, "+this.posY+"px) scaleX(-1)";
+        this.div.style.transform = "translate("+this.x+"px, "+this.y+"px) scaleX(-1)";
     }
 
-    
+    // deze functie toont of we geraakt worden of niet
+    public showHit(hit:boolean) : void {
+        if(hit){
+            this.div.style.borderColor = "red";
+        } else {
+            this.div.style.borderColor = "greenyellow";
+        }
+    }
 }
