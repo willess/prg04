@@ -2,9 +2,11 @@
 
 ## Code Snippets
 - Leeg startproject voor VS Code
-- CSS Keyframes en timeline
-- CSS Transition
-- Javascript requestAnimationFrame
+- CSS Animation met keyframes en transition
+- RequestAnimationFrame
+- Canvas Spritesheet
+- TweenLite library
+- Vector, Rectangle Math
 
 ## Tutorials
 - [CSS Filters](https://css-tricks.com/almanac/properties/f/filter/)
