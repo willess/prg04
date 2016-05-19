@@ -19,7 +19,7 @@ class Rectangle {
     }
     
     // kijk of twee rectangles elkaar raken
-    isOverlap(o2: Rectangle): boolean {
+    hasOverlap(o2: Rectangle): boolean {
         var difference = this.position.difference(o2.position);
         return Math.abs(difference.x) < this.width/2 + o2.width/2 && Math.abs(difference.y) < this.height/2 + o2.height/2;
     }
