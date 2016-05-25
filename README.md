@@ -17,6 +17,7 @@ Pixel Aquarium Javascript
 ## Week 4
 - Composition
 - Startproject Crossy Road
+- Startproject Collision Detection
 
 ## Snippets
 - Leeg startproject voor VS Code
