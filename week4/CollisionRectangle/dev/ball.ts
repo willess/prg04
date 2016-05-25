@@ -4,13 +4,17 @@ class Ball {
     
     private div : HTMLElement;
 
-    public x : number;
-    public y : number;
-    public width: number;
-    public height: number;
+    private x : number;
+    private y : number;
+    private width: number;
+    private height: number;
 
     private speedX : number;
     private speedY : number;
+    
+    public getBounds():Rectangle {
+        return new Rectangle(this.x, this.y, this.width, this.height);
+    }
     
     constructor() {
         // creeer een div element

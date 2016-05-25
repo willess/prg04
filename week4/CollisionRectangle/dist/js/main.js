@@ -7,6 +7,9 @@ var Paddle = (function () {
         this.width = 25;
         this.height = 100;
     }
+    Paddle.prototype.getBounds = function () {
+        return new Rectangle(this.x, this.y, this.width, this.height);
+    };
     Paddle.prototype.update = function () {
         this.draw();
     };
@@ -26,6 +29,9 @@ var Ball = (function () {
         this.speedX = -3;
         this.speedY = 0;
     }
+    Ball.prototype.getBounds = function () {
+        return new Rectangle(this.x, this.y, this.width, this.height);
+    };
     Ball.prototype.hitPaddle = function () {
         this.speedX *= -1;
     };
@@ -55,6 +61,13 @@ var Game = (function () {
         requestAnimationFrame(this.gameLoop.bind(this));
     }
     Game.prototype.gameLoop = function () {
+        var ballbounds = this.ball.getBounds();
+        var paddlebounds = this.paddle.getBounds();
+        var hit = ballbounds.hitsOtherRectangle(paddlebounds);
+        if (hit) {
+            this.ball.hitPaddle();
+            document.getElementsByTagName("ui")[0].innerHTML = "HIT PADDLE!";
+        }
         this.ball.update();
         this.paddle.update();
         requestAnimationFrame(this.gameLoop.bind(this));
@@ -71,6 +84,16 @@ var Rectangle = (function () {
         this.width = w;
         this.height = h;
     }
+    Rectangle.prototype.hitsPoint = function (posx, posy) {
+        var differencex = this.x - posx;
+        var differencey = this.y - posy;
+        return Math.abs(differencex) < this.width / 2 && Math.abs(differencey) < this.height / 2;
+    };
+    Rectangle.prototype.hitsOtherRectangle = function (rec) {
+        var differencex = this.x - rec.x;
+        var differencey = this.y - rec.y;
+        return Math.abs(differencex) < this.width / 2 + rec.width / 2 && Math.abs(differencey) < this.height / 2 + rec.height / 2;
+    };
     return Rectangle;
 }());
 //# sourceMappingURL=main.js.map

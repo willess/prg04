@@ -5,10 +5,14 @@ class Paddle {
     
     private div:HTMLElement;
         
-    public x : number;
-    public y : number;
-    public width: number;
-    public height: number;
+    private x : number;
+    private y : number;
+    private width: number;
+    private height: number;
+    
+    public getBounds():Rectangle {
+        return new Rectangle(this.x, this.y, this.width, this.height);
+    }
     
     constructor() {
         // maak een divje waar de paddle in komt te staan
