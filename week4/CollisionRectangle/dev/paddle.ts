@@ -20,12 +20,10 @@ class Paddle {
         document.body.appendChild(this.div);
         
         // positie
-        this.x = 0;
+        this.x = 20;
         this.y = 200;
         this.width = 25;
         this.height = 100;
-                
-       
     }
     
     public update() : void {

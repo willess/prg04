@@ -22,7 +22,11 @@ class Ball {
         document.body.appendChild(this.div);
         
         // positie
-        this.x = 430;
+        this.setStart();
+    }
+    
+    private setStart(){
+        this.x = 330;
         this.y = 210;
         this.width = 40;
         this.height = 40;
@@ -44,10 +48,10 @@ class Ball {
         // bal uit de game halen als de bal uit het scherm gaat
         if( this.x > window.innerWidth || this.x < -40) { 
             document.getElementsByTagName("ui")[0].innerHTML = "Resetting ball";
-            this.x = 430;
-            this.y = 210;
-            this.speedX = -3;
+            this.setStart();
         } 
+        
+        // stuiteren tegen de randen
         if( this.y + 40 > window.innerHeight || this.y < 0) { 
             this.speedY *= -1;
         }
