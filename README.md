@@ -19,6 +19,9 @@ Pixel Aquarium Javascript
 - Startproject Crossy Road
 - Collision Detection met Rectangle
 
+## Week 5
+- Inheritance met Crossy Road
+
 ## Snippets
 - Leeg startproject voor VS Code
 - Code snippets voor CSS en javascript
