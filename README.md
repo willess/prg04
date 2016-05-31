@@ -9,12 +9,18 @@ Pixel Aquarium Javascript
 - Pixel Aquarium Typescript Finished
 
 ## Week 3
-- Pong in Typescript
+- Pong in Typescript Startproject
+- Pong in Typescript Finished
 - Code voor Keyboard Input
 - Code voor Collision Detection
 
 ## Week 4
 - Composition
+- Startproject Crossy Road
+- Collision Detection met Rectangle
+
+## Week 5
+- Inheritance met Crossy Road
 
 ## Snippets
 - Leeg startproject voor VS Code

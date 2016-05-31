@@ -2,7 +2,6 @@ body {
     background-color: #70CF51;
     font-family: 'Press Start 2P', cursive;
     margin:0px; padding:0px;
-    overflow:hidden;
 }
 
 body * {
@@ -13,10 +12,13 @@ body * {
     background-repeat: no-repeat;
 }
 
-charmander {
+charmeleon {
     background-image: url(../images/charmander.gif);
     background-repeat: no-repeat;
     width:180px; height: 145px;
+    /* randje om beter te zien waar de hitbox is */
+    border: 2px solid greenyellow;
+    
 }
 
 background {
@@ -29,4 +31,11 @@ message {
     color:white;
     padding:20px;
     width:640px;
+}
+
+hit {
+    color:white;
+    padding:20px;
+    width:540px;
+    bottom:20px;
 }
